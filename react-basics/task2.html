@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>,
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+    
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <!-- Babel is a external Library that is used to convert the React language to readable JavaScript format so we use that Babel. -->
+    
+    <script type="text/babel">
+        function Input({card}){
+            return(
+                <div>
+                <input placeholder={card}/>
+                </div>
+            );
+        };
+        function App(){
+            return(
+                <>
+                    <p>Hello, welcome to my website.</p>
+                    <Input card="Email"/>
+                    <Input card="Password"/>
+                    <button>Login</button>
+                    <button>Sign up</button>
+                </>
+            )
+        }
+
+        function Product({message, price}){
+            return(
+                <div>
+                <p>{message}</p>
+                <p>Price : ${price}</p>
+                <button>Add to Cart</button>
+                </div>
+            )
+        }
+        function ProducctDetails(){
+            return(
+                <>
+                <Product message="Cotton socks" price="10.90"/>
+                <Product message="Tennis balls" price="6.00"/>
+                <Product message="Plain T-shirt" price="7.99"/>
+                </>
+            );
+        };
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<ProducctDetails/>);
+    </script>
+  </body>
+</html>
