@@ -2,6 +2,7 @@ import './App.css'
 import { HomePage } from './pages/HomePage';
 import { Routes, Route } from 'react-router-dom';
 import { CheckoutPage } from './pages/CheckoutPage';
+import { OrdersPage } from './pages/OrdersPage';
 //Routes component tell the website that all components in one page
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Route index element={<HomePage/>}/>
 
         <Route path="checkout" element={<CheckoutPage/>}/>
+        <Route path="orders" element={<OrdersPage/>}/>
       </Routes>
     </>
   )
